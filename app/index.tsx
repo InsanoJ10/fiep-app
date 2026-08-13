@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image} from "react-native";
 
 
 
@@ -7,27 +7,41 @@ export default function Home() {
     
     <View style={s.container}>
         <ImageBackground source={require('../assets/images/capa.png')} resizeMode="cover" style={s.image}>
-        <Image source={require('../assets/images/logo.png')} style={s.logo}>
-        <TouchableOpacity style={s.btn}>
-          <Text>ENTRAR</Text>
-        </TouchableOpacity>
-       </ImageBackground>
-    </View>
-  );
+                <Image style={s.logo} source={require('../assets/images/logo.png')}/>
+                <TouchableOpacity style={s.btn}>
+                    <Text style={s.btnText}>ENTRAR</Text>
+                </TouchableOpacity>
+            </ImageBackground>
+        </View>
+    )
 }
+
 const s = StyleSheet.create({
-    container: {
+  container: {
     flex: 1,
   },
   image: {
     flex: 1,
     justifyContent: 'center',
-  },
-  btn:{
-
+    width: '100%',
+    height: '100%'
   },
   logo:{
-
+    position: 'absolute',
+    top: 50,
+    left: 35
   },
-
-});
+  btn:{
+    position: 'absolute',
+    bottom: 100,
+    left: 80,
+    backgroundColor: '#084887',
+    paddingVertical: 20,
+    paddingHorizontal: 100,
+    borderRadius: 10
+  },
+  btnText:{
+    color: '#ffffff',
+    fontWeight: 'bold'
+  }
+})
