@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image} from "react-native";
 
 
@@ -8,7 +9,7 @@ export default function Home() {
     <View style={s.container}>
         <ImageBackground source={require('../assets/images/capa.png')} resizeMode="cover" style={s.image}>
                 <Image style={s.logo} source={require('../assets/images/logo.png')}/>
-                <TouchableOpacity style={s.btn}>
+                <TouchableOpacity style={s.btn} onPress={() => router.push("/card")}>
                     <Text style={s.btnText}>ENTRAR</Text>
                 </TouchableOpacity>
             </ImageBackground>
@@ -29,7 +30,7 @@ const s = StyleSheet.create({
   logo:{
     position: 'absolute',
     top: 50,
-    left: 35
+    left: 75
   },
   btn:{
     position: 'absolute',

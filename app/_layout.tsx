@@ -5,7 +5,10 @@ export default function RootLayout() {
   return (
     <>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="card" options={{ headerShown: false }} />
+        <Stack.Screen name="unity" options={{ headerShown: false }} />
+        <Stack.Screen name="contato" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </>
