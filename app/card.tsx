@@ -8,10 +8,10 @@ export default function Card(){
     return(
         <View>
             <TouchableOpacity onPress={() => router.push("/")}>
-                <Text>
-                    SAIR
-                </Text>
+                <Text>SAIR</Text>
             </TouchableOpacity>
+
+            <Text>Cards</Text>
             <View style={s.nav}>
                 <TouchableOpacity onPress={() => router.push("/contato")}>
                     <Image source={require('../assets/icons/Vector2.png')} style={s.img}/>

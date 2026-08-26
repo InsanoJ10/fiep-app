@@ -25,21 +25,18 @@ const s = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   logo:{
-    position: 'absolute',
-    top: 50,
-    left: 75
+    alignSelf: "center",
   },
   btn:{
-    position: 'absolute',
-    bottom: 100,
-    left: 80,
+    alignSelf: "center",
     backgroundColor: '#084887',
     paddingVertical: 20,
     paddingHorizontal: 100,
-    borderRadius: 10
+    borderRadius: 10,
+    marginTop: 500
   },
   btnText:{
     color: '#ffffff',
