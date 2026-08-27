@@ -1,4 +1,5 @@
-const data = [
+
+ const data = [
     {
         "id": "1",
         "title" :"Mecanica" ,
@@ -18,3 +19,4 @@ const data = [
         "image" :require('@/assets/images/card3.png') ,
     },
 ]
+export default data

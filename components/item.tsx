@@ -6,7 +6,7 @@ export const Item = ({picture, title, text} : {picture: ImageSourcePropType, tit
             <Image source={picture}/>
             <View>
                 <Text>{title}</Text>
-                <Text>{title}</Text>
+                <Text>{text}</Text>
             </View>
         </View>
     )
