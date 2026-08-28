@@ -6,8 +6,8 @@ export default function Card(){
 
 
     return(
-        <View>
-            <TouchableOpacity onPress={() => router.push("/")}>
+        <View style={s.screen}>
+            <TouchableOpacity onPress={() => router.push("/")} style={s.button}>
                 <Text>SAIR</Text>
             </TouchableOpacity>
             <Text>Cards</Text>
@@ -29,19 +29,31 @@ export default function Card(){
 }
 
 const s = StyleSheet.create({
-        nav:{
-            position: 'fixed',
-            bottom: 0,
-            backgroundColor: '#343A40',
-            width:'100%',
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-            padding: 20,
+     screen:{
+        flex: 1,
+        display: 'flex',
+    },
+    nav:{
+        position: 'fixed',
+        bottom: 0,
+        backgroundColor: '#343A40',
+        width:'100%',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        padding: 20,
         },
-        img:{
-            backgroundColor:'#ADB5BD',
+    img:{
+        backgroundColor:'#ADB5BD',
         },
-        img2:{
-            backgroundColor:'#ADB5BD',
-        }
+    img2:{
+        backgroundColor:'#ADB5BD',
+        },
+    button:{
+        marginHorizontal: 36,
+        marginVertical: 50,
+        backgroundColor: '#343A40',
+        paddingHorizontal: 20,
+        paddingVertical: 12,
+        width: 85,
+    }
 })
