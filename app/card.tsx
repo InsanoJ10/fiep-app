@@ -7,13 +7,17 @@ export default function Card(){
 
     return(
         <View style={s.screen}>
-            <TouchableOpacity onPress={() => router.push("/")} style={s.button}>
-                <Text>SAIR</Text>
-            </TouchableOpacity>
-            <Text>Cards</Text>
+            
             <ScrollView>
-                <FlatList  data={dados} renderItem={({item}) =>(
-                        <Item picture={item.image} title={item.title} text={item.text}/>)}>
+                <FlatList  
+                data={dados} 
+                renderItem={({item}) =>(
+                        <Item picture={item.image} title={item.title} text={item.text}/>)}
+                        ListHeaderComponent={() => (
+                            <TouchableOpacity onPress={() => router.push("/")} style={s.button}>
+                                <Text style={s.buttonText}>SAIR</Text>
+                            </TouchableOpacity>
+                        )}>
                 </FlatList>
             </ScrollView>
             <View style={s.nav}>
@@ -52,11 +56,14 @@ const s = StyleSheet.create({
         marginHorizontal: 36,
         marginVertical: 50,
         backgroundColor: '#343A40',
-        paddingHorizontal: 20,
+        alignItems:'center',
         paddingVertical: 12,
         width: 85,
+        borderRadius: 10
     },
     buttonText:{
-        color:'white'
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
     }
 })
