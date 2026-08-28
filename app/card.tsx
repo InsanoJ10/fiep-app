@@ -55,5 +55,8 @@ const s = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 12,
         width: 85,
+    },
+    buttonText:{
+        color:'white'
     }
 })
