@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Image, TextInput } from "react-native";
 import { router } from "expo-router";
 
 
@@ -6,24 +6,39 @@ import { router } from "expo-router";
 
 export default function Contato(){
     return(
-        <>
-        <TouchableOpacity onPress={() => router.push("/")}>
-                <Text>SAIR</Text>
-            </TouchableOpacity>
-        <View>
-            <Text>Contato</Text>
-        </View><View style={s.nav}>
-                <TouchableOpacity onPress={() => router.push("/unity")}>
-                    <Image source={require('../assets/icons/Vector2.png')} style={s.img} />
+        
+        
+            <View style={s.screen}>
+                <Text>Contato</Text>
+                <View>
+                    <View>
+                        <Text>Nome</Text>
+                        <TextInput placeholder="DIGITE SEU NOME" />
+                    </View>
+                    <View>
+                        <Text>Mensagem</Text>
+                        <TextInput placeholder="DIGITE O ASSUNTO" />
+                    </View>
+                </View>
+                <TouchableOpacity>
+                    <Text>Enviar</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => router.push("/card")}>
-                    <Image source={require('../assets/icons/Vector.png')} style={s.img2} />
-                </TouchableOpacity>
+                <View style={s.nav}>
+                    <TouchableOpacity onPress={() => router.push("/unity")}>
+                        <Image source={require('../assets/icons/Vector2.png')} style={s.img} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => router.push("/card")}>
+                        <Image source={require('../assets/icons/Vector.png')} style={s.img2} />
+                    </TouchableOpacity>
+                </View>
             </View>
-            </>
     )
 }
 const s = StyleSheet.create({
+    screen:{
+        flex: 1,
+        display: 'flex',
+    },
      nav:{
             position: 'fixed',
             bottom: 0,

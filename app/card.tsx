@@ -10,16 +10,12 @@ export default function Card(){
             <TouchableOpacity onPress={() => router.push("/")}>
                 <Text>SAIR</Text>
             </TouchableOpacity>
-
-                
-                    <FlatList  data={dados} renderItem={({item}) =>(
-                        <Item picture={item.image} title={item.title} text={item.text} />
-                    )} >
-
-                    </FlatList>
-                
-
             <Text>Cards</Text>
+            <ScrollView>
+                <FlatList  data={dados} renderItem={({item}) =>(
+                        <Item picture={item.image} title={item.title} text={item.text}/>)}>
+                </FlatList>
+            </ScrollView>
             <View style={s.nav}>
                 <TouchableOpacity onPress={() => router.push("/contato")}>
                     <Image source={require('../assets/icons/Vector2.png')} style={s.img}/>

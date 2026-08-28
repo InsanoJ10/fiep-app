@@ -6,26 +6,34 @@ import { router } from "expo-router";
 
 export default function Unity(){
     return(
-        <>
-        <TouchableOpacity onPress={() => router.push("/")}>
-                <Text>SAIR</Text>
-            </TouchableOpacity>
-        <View>
-            <Text>Apresentação</Text>
+        
+        <View style={s.screen}>
+            <Image source={require('@/assets/images/img.png')}/>
+            <Text style={s.text}>A sede da FIEP fica na Avenida Cândido de Abreu, 200, no Centro Cívico, em Curitiba. O Sistema Fiep também possui um grande complexo de inovação e serviços conhecido como Campus da Indústria, localizado na Avenida Comendador Franco, 1341, 
+            no Jardim Botânico.</Text>
+            
+            <View style={s.nav}>
+                    <TouchableOpacity onPress={() => router.push("/card")}>
+                        <Image source={require('../assets/icons/Vector2.png')} style={s.img} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => router.push("/contato")}>
+                        <Image source={require('../assets/icons/Vector.png')} style={s.img2} />
+                    </TouchableOpacity>
+                </View>
         </View>
-        <View style={s.nav}>
-                <TouchableOpacity onPress={() => router.push("/card")}>
-                    <Image source={require('../assets/icons/Vector2.png')} style={s.img} />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => router.push("/contato")}>
-                    <Image source={require('../assets/icons/Vector.png')} style={s.img2} />
-                </TouchableOpacity>
-            </View>
-        </>
+        
     )
 }
 
 const s = StyleSheet.create({
+    screen:{
+        flex: 1,
+        backgroundColor: '#6C757D'
+
+    },
+    text:{
+
+    },
      nav:{
             position: 'fixed',
             bottom: 0,
